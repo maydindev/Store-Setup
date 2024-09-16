@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, NavLink, Outlet } from 'react-router-dom'
 import useFetch from '../utilities/useFetch'
 
 export default function ProductDetails() {
@@ -18,7 +18,7 @@ export default function ProductDetails() {
         setProduct(data)
       })
       .catch((error) => console.log(error))
-  }, [])
+  }, [id])
 
   return (
     <div>
@@ -29,8 +29,9 @@ export default function ProductDetails() {
           <h3>${product.price}</h3>
           <img src={product.image} width='100' />
           <p>
-            View <Link>delivery notes</Link>
+            View <NavLink to={`/products/${id}/delivery`}className={({isActive}) => (isActive ? "btn nav-active" : "btn")}>delivery notes</NavLink>
           </p>
+          <Outlet/>
         </div>
       )}
     </div>

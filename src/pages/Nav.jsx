@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Nav() {
   return (
     <nav>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink to='/' className={({isActive}) => (isActive ? 'btn nav-active' : 'btn')}>Home</NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about' className={({isActive}) => (isActive ? 'btn nav-active' : 'btn')}>About</NavLink>
         </li>
         <li>
-          <Link to='/products'>Products</Link>
+          <NavLink to='/products' className={({isActive}) => (isActive ? 'btn nav-active' : 'btn')}>Products</NavLink>
         </li>
       </ul>
     </nav>

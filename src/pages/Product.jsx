@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Product(props) {
   const [count, setCount] = useState(0)
@@ -16,7 +16,7 @@ export default function Product(props) {
   }
 
   return (
-    <Link to={`${details.id}`}>
+    <NavLink to={`${details.id}`} className={({isActive}) => (isActive ? "btn nav-active" : "btn")}>
       <div className='product'>
         <img src={details.image} width='50' alt={details.name} />
         <div className='product-info'>
@@ -24,6 +24,6 @@ export default function Product(props) {
           <p>{details.description}</p>
         </div>
       </div>
-    </Link>
+    </NavLink>
   )
 }

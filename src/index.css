@@ -24,8 +24,10 @@ body {
   border: 0;
   border-radius: 3px;
   font-size: 16px;
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: teal;
   transition: opacity 180ms ease-out, transform 180ms ease-out;
+  text-decoration: none;
 }
 
 .btn:hover {
