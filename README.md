@@ -21,6 +21,8 @@ Mevcut teslimat notları bağlantısını doğru yola sahip olacak şekilde gün
 Kullanıcı bu alt rotaya geldiğinde < ProductDelivery /> bileşenini oluşturun. -->
 
 NotFound Netlify Çözümü
+https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125/12?utm_source=404page&utm_campaign=community_tracking
+
 Netlify'de NotFound sayfanızın doğru çalışabilmesi için, doğru yönlendirmelerin yapılması gerekir. Netlify, client-side routing için özel bir yapılandırma gerektirir, çünkü server tarafında geçerli bir yönlendirme yapılmadığı için, tarayıcı yalnızca mevcut sayfayı arar.
 
 Bu sorunu çözmek için, Netlify'nin redirects dosyasını kullanabilirsiniz. Bu dosya, tüm yönlendirme isteklerini React uygulamanıza yönlendirmeye yarar. İşte nasıl yapacağınız:
